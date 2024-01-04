@@ -116,6 +116,16 @@
         bounds_group.addLayer(layer_FairDistrictsPickupDropOffLocations_1);
         map.addLayer(layer_FairDistrictsPickupDropOffLocations_1);
         setBounds();
+        resetLabels([layer_FairDistrictsPickupDropOffLocations_1]);
+        map.on("zoomend", function(){
+            resetLabels([layer_FairDistrictsPickupDropOffLocations_1]);
+        });
+        map.on("layeradd", function(){
+            resetLabels([layer_FairDistrictsPickupDropOffLocations_1]);
+        });
+        map.on("layerremove", function(){
+            resetLabels([layer_FairDistrictsPickupDropOffLocations_1]);
+        });
         </script>
     </body>
 </html>
